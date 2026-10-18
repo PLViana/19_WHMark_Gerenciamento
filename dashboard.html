@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Lojista - Visão Geral</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Ícones SVG leves via Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-layout">
+    
+    <!-- Barra Lateral de Navegação -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">
+          <i data-lucide="store"></i>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Minha Loja</span>
+          <span class="brand-sub">loja.vc/artesanal</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active">
+          <i data-lucide="layout-dashboard"></i>
+          <span>Visão Geral</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="shopping-bag"></i>
+          <span>Pedidos</span>
+          <span class="badge">4</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="package"></i>
+          <span>Catálogo</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="calendar"></i>
+          <span>Agenda</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="wallet"></i>
+          <span>Financeiro</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="palette"></i>
+          <span>Minha Vitrine</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i data-lucide="settings"></i>
+          <span>Configurações</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">AD</div>
+          <div class="user-meta">
+            <span class="user-name">Ana Doces</span>
+            <span class="user-role">Proprietária</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+      
+      <!-- Topbar / Cabeçalho Operacional -->
+      <header class="topbar">
+        <div class="topbar-welcome">
+          <h1 class="page-title">Visão Geral</h1>
+          <p class="page-subtitle">Acompanhe as vendas e operações da sua loja hoje.</p>
+        </div>
+
+        <div class="topbar-actions">
+          <!-- Interruptor de Status da Loja -->
+          <div class="store-status-card">
+            <span class="status-indicator online"></span>
+            <div class="status-text">
+              <span class="status-title">Loja Aberta</span>
+              <span class="status-desc">Recebendo pedidos</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" checked id="statusSwitch">
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <button class="btn btn-outline" title="Copiar link da bio">
+            <i data-lucide="share-2"></i>
+            <span>Compartilhar</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Grade de Alertas Rápidos de Operação -->
+      <section class="operational-banners">
+        <div class="alert-banner warning">
+          <i data-lucide="bell-ring"></i>
+          <div class="alert-text">
+            <strong>3 pedidos aguardando confirmação.</strong> O tempo médio de resposta impacta sua nota na vitrine.
+          </div>
+          <button class="btn btn-sm btn-warning">Ver Pedidos</button>
+        </div>
+      </section>
+
+      <!-- Cartões de Métricas / KPIs -->
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Faturamento Hoje</span>
+            <div class="kpi-icon-wrapper success">
+              <i data-lucide="dollar-sign"></i>
+            </div>
+          </div>
+          <div class="kpi-value">R$ 1.480,50</div>
+          <div class="kpi-footer positive">
+            <i data-lucide="arrow-up-right"></i>
+            <span>+18.2%</span>
+            <span class="kpi-context">vs. ontem</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Pedidos Concluídos</span>
+            <div class="kpi-icon-wrapper primary">
+              <i data-lucide="shopping-cart"></i>
+            </div>
+          </div>
+          <div class="kpi-value">26</div>
+          <div class="kpi-footer positive">
+            <i data-lucide="arrow-up-right"></i>
+            <span>+4 pedidos</span>
+            <span class="kpi-context">acima da média</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Ticket Médio</span>
+            <div class="kpi-icon-wrapper info">
+              <i data-lucide="receipt"></i>
+            </div>
+          </div>
+          <div class="kpi-value">R$ 56,94</div>
+          <div class="kpi-footer neutral">
+            <span>Estável</span>
+            <span class="kpi-context">últimos 7 dias</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-label">Visitas na Vitrine (Bio)</span>
+            <div class="kpi-icon-wrapper neutral-bg">
+              <i data-lucide="eye"></i>
+            </div>
+          </div>
+          <div class="kpi-value">342</div>
+          <div class="kpi-footer positive">
+            <i data-lucide="arrow-up-right"></i>
+            <span>+32%</span>
+            <span class="kpi-context">conversão: 7.6%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Principal em Colunas: Pedidos Recentes + Ações / Catálogo -->
+      <div class="dashboard-split">
+        
+        <!-- Tabela / Lista de Pedidos em Tempo Real -->
+        <div class="content-card flex-2">
+          <div class="card-header">
+            <div class="header-titles">
+              <h2 class="card-title">Pedidos em Andamento</h2>
+              <p class="card-subtitle">Últimos pedidos recebidos diretamente da sua página</p>
+            </div>
+            <a href="#" class="link-action">Ver todos</a>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Cliente</th>
+                  <th>Itens</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#1042</strong></td>
+                  <td>
+                    <div class="customer-cell">
+                      <span class="customer-name">Camila Silva</span>
+                      <span class="customer-sub">Retirada no Local</span>
+                    </div>
+                  </td>
+                  <td>2x Bolo de Pote, 1x Café Gelado</td>
+                  <td>R$ 48,00</td>
+                  <td><span class="tag tag-warning">Aguardando</span></td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn-icon" title="Aceitar Pedido"><i data-lucide="check"></i></button>
+                      <button class="btn-icon" title="Abrir WhatsApp"><i data-lucide="message-circle"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>#1041</strong></td>
+                  <td>
+                    <div class="customer-cell">
+                      <span class="customer-name">Marcos Souza</span>
+                      <span class="customer-sub">Entrega Própria (3.2 km)</span>
+                    </div>
+                  </td>
+                  <td>1x Torta Holandesa Grande</td>
+                  <td>R$ 85,00</td>
+                  <td><span class="tag tag-primary">Em Preparo</span></td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn-icon" title="Despachar"><i data-lucide="truck"></i></button>
+                      <button class="btn-icon" title="Abrir WhatsApp"><i data-lucide="message-circle"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>#1040</strong></td>
+                  <td>
+                    <div class="customer-cell">
+                      <span class="customer-name">Juliana Costa</span>
+                      <span class="customer-sub">Entrega Expressa</span>
+                    </div>
+                  </td>
+                  <td>4x Brigadeiro Gourmet</td>
+                  <td>R$ 24,00</td>
+                  <td><span class="tag tag-info">Saiu p/ Entrega</span></td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn-icon" title="Concluir"><i data-lucide="check-check"></i></button>
+                      <button class="btn-icon" title="Abrir WhatsApp"><i data-lucide="message-circle"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Painel Lateral: Atalhos Rápidos e Saúde da Vitrine -->
+        <div class="content-card flex-1">
+          <div class="card-header">
+            <h2 class="card-title">Sua Vitrine Pública</h2>
+          </div>
+
+          <div class="store-preview-widget">
+            <div class="link-preview-box">
+              <div class="link-icon"><i data-lucide="link"></i></div>
+              <div class="link-details">
+                <span class="link-url">loja.vc/artesanal</span>
+                <span class="link-hint">Clique para testar a visão do cliente</span>
+              </div>
+              <button class="btn-icon" title="Copiar"><i data-lucide="copy"></i></button>
+            </div>
+
+            <div class="qr-code-placeholder">
+              <i data-lucide="qr-code"></i>
+              <span>QR Code da Loja Pronto para Balcão</span>
+            </div>
+          </div>
+
+          <div class="quick-actions-list">
+            <h3 class="subsection-title">Ações Rápidas</h3>
+            <button class="action-btn">
+              <i data-lucide="plus-circle"></i>
+              <span>Cadastrar Novo Produto / Serviço</span>
+            </button>
+            <button class="action-btn">
+              <i data-lucide="ticket"></i>
+              <span>Criar Cupom de Desconto</span>
+            </button>
+            <button class="action-btn">
+              <i data-lucide="sliders"></i>
+              <span>Editar Horários de Funcionamento</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // Inicialização dos ícones Lucide
+    lucide.createIcons();
+
+    // Toggle básico de status da loja
+    const statusSwitch = document.getElementById('statusSwitch');
+    const statusTitle = document.querySelector('.status-title');
+    const statusIndicator = document.querySelector('.status-indicator');
+
+    statusSwitch.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        statusTitle.textContent = 'Loja Aberta';
+        statusIndicator.className = 'status-indicator online';
+      } else {
+        statusTitle.textContent = 'Loja Fechada';
+        statusIndicator.className = 'status-indicator offline';
+      }
+    });
+  </script>
+</body>
+</html>
