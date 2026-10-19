@@ -13,15 +13,67 @@
     
     <!-- Barra Lateral de Navegação -->
     <aside class="sidebar">
-      <div class="sidebar-brand">
-        <div class="brand-logo">
-          <i data-lucide="store"></i>
+              <!-- Seletor de Loja / Multi-empresa -->
+<div class="store-switcher-container">
+  <button class="store-switcher-btn" id="storeSwitcherBtn" aria-expanded="false" aria-haspopup="true">
+    <div class="brand-logo">
+      <i data-lucide="store"></i>
+    </div>
+    <div class="brand-info">
+      <span class="brand-group">Grupo Alimentar</span>
+      <span class="brand-name">Ana Doces & Café</span>
+    </div>
+    <i data-lucide="chevrons-up-down" class="switcher-arrow"></i>
+  </button>
+
+  <!-- Dropdown de Lojas do Grupo -->
+  <div class="store-dropdown" id="storeDropdown">
+    <div class="dropdown-header">
+      <span>Alternar Empresa</span>
+    </div>
+
+    <div class="store-list">
+      <!-- Loja Ativa -->
+      <button class="store-option active">
+        <div class="store-mini-avatar">AD</div>
+        <div class="store-details">
+          <span class="store-title">Ana Doces & Café</span>
+          <span class="store-slug">loja.vc/anadoces</span>
         </div>
-        <div class="brand-info">
-          <span class="brand-name">Minha Loja</span>
-          <span class="brand-sub">loja.vc/artesanal</span>
+        <i data-lucide="check" class="check-icon"></i>
+      </button>
+
+      <!-- Segunda Loja -->
+      <button class="store-option">
+        <div class="store-mini-avatar">BG</div>
+        <div class="store-details">
+          <span class="store-title">Bella Gelateria</span>
+          <span class="store-slug">loja.vc/bellagelato</span>
         </div>
-      </div>
+      </button>
+
+      <!-- Terceira Loja / Outro Ramo -->
+      <button class="store-option">
+        <div class="store-mini-avatar">BE</div>
+        <div class="store-details">
+          <span class="store-title">Bella Eventos & Buffet</span>
+          <span class="store-slug">loja.vc/bellaeventos</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="dropdown-footer">
+      <button class="dropdown-action-btn">
+        <i data-lucide="plus"></i>
+        <span>Adicionar Nova Loja</span>
+      </button>
+      <button class="dropdown-action-btn">
+        <i data-lucide="settings-2"></i>
+        <span>Gerenciar Grupo</span>
+      </button>
+    </div>
+  </div>
+</div>
 
       <nav class="sidebar-nav">
         <a href="#" class="nav-item active">
@@ -300,6 +352,23 @@
   </div>
 
   <script>
+    const switcherBtn = document.getElementById('storeSwitcherBtn');
+    const storeDropdown = document.getElementById('storeDropdown');
+
+    // Abre/fecha dropdown ao clicar no seletor
+    switcherBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = storeDropdown.classList.toggle('open');
+    switcherBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Fecha ao clicar fora da área
+    document.addEventListener('click', (e) => {
+    if (!storeDropdown.contains(e.target) && !switcherBtn.contains(e.target)) {
+        storeDropdown.classList.remove('open');
+        switcherBtn.setAttribute('aria-expanded', 'false');
+    }
+    });
     // Inicialização dos ícones Lucide
     lucide.createIcons();
 
